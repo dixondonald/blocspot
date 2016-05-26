@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		822B381C1CDB9E7700D206A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B381B1CDB9E7700D206A1 /* main.m */; };
 		822B381F1CDB9E7700D206A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B381E1CDB9E7700D206A1 /* AppDelegate.m */; };
-		822B38221CDB9E7700D206A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B38211CDB9E7700D206A1 /* ViewController.m */; };
+		822B38221CDB9E7700D206A1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B38211CDB9E7700D206A1 /* MapViewController.m */; };
 		822B38251CDB9E7700D206A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822B38231CDB9E7700D206A1 /* Main.storyboard */; };
 		822B38281CDB9E7700D206A1 /* blocspot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 822B38261CDB9E7700D206A1 /* blocspot.xcdatamodeld */; };
 		822B382A1CDB9E7700D206A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822B38291CDB9E7700D206A1 /* Assets.xcassets */; };
@@ -40,8 +40,8 @@
 		822B381B1CDB9E7700D206A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		822B381D1CDB9E7700D206A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		822B381E1CDB9E7700D206A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		822B38201CDB9E7700D206A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		822B38211CDB9E7700D206A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		822B38201CDB9E7700D206A1 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		822B38211CDB9E7700D206A1 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		822B38241CDB9E7700D206A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		822B38271CDB9E7700D206A1 /* blocspot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = blocspot.xcdatamodel; sourceTree = "<group>"; };
 		822B38291CDB9E7700D206A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 			children = (
 				822B381D1CDB9E7700D206A1 /* AppDelegate.h */,
 				822B381E1CDB9E7700D206A1 /* AppDelegate.m */,
-				822B38201CDB9E7700D206A1 /* ViewController.h */,
-				822B38211CDB9E7700D206A1 /* ViewController.m */,
+				822B38201CDB9E7700D206A1 /* MapViewController.h */,
+				822B38211CDB9E7700D206A1 /* MapViewController.m */,
 				822B38231CDB9E7700D206A1 /* Main.storyboard */,
 				822B38291CDB9E7700D206A1 /* Assets.xcassets */,
 				822B382B1CDB9E7700D206A1 /* LaunchScreen.storyboard */,
@@ -274,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822B38221CDB9E7700D206A1 /* ViewController.m in Sources */,
+				822B38221CDB9E7700D206A1 /* MapViewController.m in Sources */,
 				822B381F1CDB9E7700D206A1 /* AppDelegate.m in Sources */,
 				822B381C1CDB9E7700D206A1 /* main.m in Sources */,
 				822B38281CDB9E7700D206A1 /* blocspot.xcdatamodeld in Sources */,
@@ -507,6 +507,7 @@
 				822B38491CDB9E7700D206A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		822B384A1CDB9E7700D206A1 /* Build configuration list for PBXNativeTarget "blocspotTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				822B384C1CDB9E7700D206A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		822B384D1CDB9E7700D206A1 /* Build configuration list for PBXNativeTarget "blocspotUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				822B384F1CDB9E7700D206A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

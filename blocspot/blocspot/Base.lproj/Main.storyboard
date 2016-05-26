@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GPs-cX-6RI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Find anything in your area!" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="03S-44-bzm">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <color key="backgroundColor" red="0.97658049753671028" green="1" blue="0.989074873509451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="aPd-gb-eTw"/>
+                                    <constraint firstAttribute="height" constant="30" id="d85-Fe-O2R"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="305" id="fis-x2-q9f"/>
+                                    <constraint firstAttribute="width" constant="305" id="qF6-L7-i3v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="search"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aPd-gb-eTw"/>
+                                        <exclude reference="d85-Fe-O2R"/>
+                                        <exclude reference="fis-x2-q9f"/>
+                                        <exclude reference="qF6-L7-i3v"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="aPd-gb-eTw"/>
+                                        <include reference="d85-Fe-O2R"/>
+                                        <include reference="fis-x2-q9f"/>
+                                        <include reference="qF6-L7-i3v"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="didSearch:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Ifb-xH-g9O"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GPs-cX-6RI" secondAttribute="trailing" constant="-20" id="4zb-A2-PPA"/>
+                            <constraint firstItem="03S-44-bzm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="5ek-vw-AEf"/>
+                            <constraint firstItem="GPs-cX-6RI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="F4P-13-jES"/>
+                            <constraint firstItem="GPs-cX-6RI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="RBP-Q9-zr7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GPs-cX-6RI" secondAttribute="bottom" id="jsI-NJ-8YG"/>
+                            <constraint firstItem="03S-44-bzm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWg-yn-Ejm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GPs-cX-6RI"/>
+                                <exclude reference="03S-44-bzm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="jsI-NJ-8YG"/>
+                                <exclude reference="5ek-vw-AEf"/>
+                                <exclude reference="lWg-yn-Ejm"/>
+                                <exclude reference="4zb-A2-PPA"/>
+                                <exclude reference="F4P-13-jES"/>
+                                <exclude reference="RBP-Q9-zr7"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GPs-cX-6RI"/>
+                                <include reference="03S-44-bzm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="jsI-NJ-8YG"/>
+                                <include reference="5ek-vw-AEf"/>
+                                <include reference="lWg-yn-Ejm"/>
+                                <include reference="4zb-A2-PPA"/>
+                                <include reference="F4P-13-jES"/>
+                                <include reference="RBP-Q9-zr7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="GPs-cX-6RI" id="txy-sm-fdf"/>
+                        <outlet property="searchTextField" destination="03S-44-bzm" id="Rs9-os-LQN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="367.5" y="314"/>
         </scene>
     </scenes>
 </document>
