@@ -16,6 +16,9 @@
 		822B382D1CDB9E7700D206A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822B382B1CDB9E7700D206A1 /* LaunchScreen.storyboard */; };
 		822B38381CDB9E7700D206A1 /* blocspotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B38371CDB9E7700D206A1 /* blocspotTests.m */; };
 		822B38431CDB9E7700D206A1 /* blocspotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 822B38421CDB9E7700D206A1 /* blocspotUITests.m */; };
+		82D6FB651CF76257008F51FE /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D6FB641CF76257008F51FE /* ResultsTableViewController.m */; };
+		82D6FB681CF762A8008F51FE /* ResultsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D6FB671CF762A8008F51FE /* ResultsTableCell.m */; };
+		82D6FB6B1CF762D0008F51FE /* RouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D6FB6A1CF762D0008F51FE /* RouteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		822B383E1CDB9E7700D206A1 /* blocspotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blocspotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		822B38421CDB9E7700D206A1 /* blocspotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blocspotUITests.m; sourceTree = "<group>"; };
 		822B38441CDB9E7700D206A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82D6FB631CF76257008F51FE /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		82D6FB641CF76257008F51FE /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
+		82D6FB661CF762A8008F51FE /* ResultsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableCell.h; sourceTree = "<group>"; };
+		82D6FB671CF762A8008F51FE /* ResultsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableCell.m; sourceTree = "<group>"; };
+		82D6FB691CF762D0008F51FE /* RouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteViewController.h; sourceTree = "<group>"; };
+		82D6FB6A1CF762D0008F51FE /* RouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +116,12 @@
 				822B381E1CDB9E7700D206A1 /* AppDelegate.m */,
 				822B38201CDB9E7700D206A1 /* MapViewController.h */,
 				822B38211CDB9E7700D206A1 /* MapViewController.m */,
+				82D6FB631CF76257008F51FE /* ResultsTableViewController.h */,
+				82D6FB641CF76257008F51FE /* ResultsTableViewController.m */,
+				82D6FB661CF762A8008F51FE /* ResultsTableCell.h */,
+				82D6FB671CF762A8008F51FE /* ResultsTableCell.m */,
+				82D6FB691CF762D0008F51FE /* RouteViewController.h */,
+				82D6FB6A1CF762D0008F51FE /* RouteViewController.m */,
 				822B38231CDB9E7700D206A1 /* Main.storyboard */,
 				822B38291CDB9E7700D206A1 /* Assets.xcassets */,
 				822B382B1CDB9E7700D206A1 /* LaunchScreen.storyboard */,
@@ -275,9 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				822B38221CDB9E7700D206A1 /* MapViewController.m in Sources */,
+				82D6FB681CF762A8008F51FE /* ResultsTableCell.m in Sources */,
 				822B381F1CDB9E7700D206A1 /* AppDelegate.m in Sources */,
 				822B381C1CDB9E7700D206A1 /* main.m in Sources */,
 				822B38281CDB9E7700D206A1 /* blocspot.xcdatamodeld in Sources */,
+				82D6FB6B1CF762D0008F51FE /* RouteViewController.m in Sources */,
+				82D6FB651CF76257008F51FE /* ResultsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

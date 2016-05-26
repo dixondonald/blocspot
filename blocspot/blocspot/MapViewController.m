@@ -9,7 +9,7 @@
 #import "MapViewController.h"
 #import "MapKit/Mapkit.h"
 
-@interface MapViewController () <MKMapViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
+@interface MapViewController () 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UITextField *searchTextField;
 
@@ -32,6 +32,13 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ResultsTableViewController *destination =
+    [segue destinationViewController];
+    
+    destination.mapItems = self.matchingItems;
+}
 
 - (IBAction)didSearch:(id)sender {
     [self.searchTextField resignFirstResponder];
@@ -55,7 +62,7 @@
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
     request.naturalLanguageQuery = self.searchTextField.text;
-    request.region = _mapView.region;
+    request.region = self.mapView.region;
     
         self.matchingItems = [[NSMutableArray alloc] init];
     
