@@ -6,13 +6,13 @@
 //  Copyright © 2016 DonaldDixon. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MapViewController.h"
 
-@interface ViewController ()
+@interface MapViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
