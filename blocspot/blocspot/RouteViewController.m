@@ -38,8 +38,18 @@
     
     request.source = [MKMapItem mapItemForCurrentLocation];
     
-    request.destination = _destination;
-    request.requestsAlternateRoutes = NO;
+    if (self.didComeFromTableView == NO) {
+        
+    
+    MKPlacemark *mkDest = [[MKPlacemark alloc]
+                           initWithCoordinate:_destination.coordinate
+                           addressDictionary:nil];
+    
+    [request setDestination:[[MKMapItem alloc] initWithPlacemark:mkDest]];    request.requestsAlternateRoutes = NO;
+    }
+    else if (self.didComeFromTableView == YES) {
+        request.destination = self.tableDestination;
+    }
     MKDirections *directions =
     [[MKDirections alloc] initWithRequest:request];
     

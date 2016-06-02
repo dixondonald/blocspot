@@ -12,6 +12,8 @@
 @interface RouteViewController : UIViewController
 <MKMapViewDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *routeMap;
-@property (strong, nonatomic) MKMapItem *destination;
+@property (strong, nonatomic) MKPointAnnotation *destination;
+@property (strong, nonatomic) MKMapItem *tableDestination;
+@property BOOL didComeFromTableView;
 
 @end

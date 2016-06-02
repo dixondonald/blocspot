@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -48,13 +49,13 @@
                                 <exclude reference="HlI-wj-KeX"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="YVJ-Ij-rSg"/>
-                                <exclude reference="hme-HW-gaW"/>
-                                <exclude reference="w8q-Pr-EpJ"/>
+                                <exclude reference="f5k-hv-Ujp"/>
                                 <exclude reference="MM5-ZW-prw"/>
                                 <exclude reference="QUG-oQ-0wY"/>
                                 <exclude reference="WE1-NN-X3t"/>
-                                <exclude reference="f5k-hv-Ujp"/>
+                                <exclude reference="YVJ-Ij-rSg"/>
+                                <exclude reference="hme-HW-gaW"/>
+                                <exclude reference="w8q-Pr-EpJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -63,13 +64,13 @@
                                 <include reference="HlI-wj-KeX"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="YVJ-Ij-rSg"/>
-                                <include reference="hme-HW-gaW"/>
-                                <include reference="w8q-Pr-EpJ"/>
+                                <include reference="f5k-hv-Ujp"/>
                                 <include reference="MM5-ZW-prw"/>
                                 <include reference="QUG-oQ-0wY"/>
                                 <include reference="WE1-NN-X3t"/>
-                                <include reference="f5k-hv-Ujp"/>
+                                <include reference="YVJ-Ij-rSg"/>
+                                <include reference="hme-HW-gaW"/>
+                                <include reference="w8q-Pr-EpJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -91,6 +92,7 @@
                     <connections>
                         <outlet property="mapView" destination="GPs-cX-6RI" id="txy-sm-fdf"/>
                         <outlet property="searchTextField" destination="03S-44-bzm" id="Rs9-os-LQN"/>
+                        <segue destination="HG6-lN-29r" kind="show" identifier="routeViewSegue" id="JyU-kA-iV6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,12 +104,15 @@
             <objects>
                 <tableViewController id="nLq-Qd-UHG" customClass="ResultsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eOq-rN-a8q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" id="OgO-Fp-HpW" customClass="ResultsTableCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OgO-Fp-HpW" id="xUh-hd-eT2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-5u-fNb">
@@ -168,6 +173,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QgB-ol-SYc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UBe-Uv-eeM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Cn-dS-oXJ">
@@ -186,10 +192,10 @@
                                 <exclude reference="9Cn-dS-oXJ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="dF9-Zx-2K6"/>
                                 <exclude reference="3q9-Mg-bdb"/>
                                 <exclude reference="Uck-Aj-ghK"/>
                                 <exclude reference="vzr-n0-WoE"/>
-                                <exclude reference="dF9-Zx-2K6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -197,10 +203,10 @@
                                 <include reference="9Cn-dS-oXJ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="dF9-Zx-2K6"/>
                                 <include reference="3q9-Mg-bdb"/>
                                 <include reference="Uck-Aj-ghK"/>
                                 <include reference="vzr-n0-WoE"/>
-                                <include reference="dF9-Zx-2K6"/>
                             </mask>
                         </variation>
                     </view>
@@ -231,4 +237,7 @@
             <point key="canvasLocation" x="367.5" y="314"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JyU-kA-iV6"/>
+    </inferredMetricsTieBreakers>
 </document>

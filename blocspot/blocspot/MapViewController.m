@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSMutableArray *matchingItems;
+
+
 @end
 
 @implementation MapViewController
@@ -34,10 +36,21 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:@"routeViewSegue"]) {
+        
+        RouteViewController *routeController =
+        [segue destinationViewController];
+        MKPointAnnotation *point = sender;
+        
+        routeController.didComeFromTableView = NO;
+        routeController.destination = point;
+    }
+    else {
     ResultsTableViewController *destination =
     [segue destinationViewController];
     
     destination.mapItems = self.matchingItems;
+    }
 }
 
 - (IBAction)didSearch:(id)sender {
@@ -51,10 +64,27 @@
 {
     MKCoordinateRegion mapRegion;
     mapRegion.center = mapView.userLocation.coordinate;
-    mapRegion.span.latitudeDelta = 0.2;
-    mapRegion.span.longitudeDelta = 0.2;
+    mapRegion.span.latitudeDelta = 0.02;
+    mapRegion.span.longitudeDelta = 0.02;
     
     [mapView setRegion:mapRegion animated: YES];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+    annotationView.canShowCallout = YES;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self performSegueWithIdentifier:@"routeViewSegue" sender:view.annotation];
 }
 
 

@@ -50,7 +50,8 @@
     
     long row = [indexPath row];
     
-    routeController.destination = _mapItems[row];
+    routeController.didComeFromTableView = YES;
+    routeController.tableDestination = _mapItems[row];
 }
 
 
